@@ -22,7 +22,7 @@ public class UsuarioDetailsService implements UserDetailsService{
         
         Usuario usuario = usuarioRepository.findByEmail(email)
             .orElseThrow(() -> 
-                new UnsupportedOperationException("Usuário não encontrado"));
+                new UsernameNotFoundException("Usuário não encontrado"));
         
         return User
             .withUsername(usuario.getEmail())

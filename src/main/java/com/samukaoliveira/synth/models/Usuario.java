@@ -35,6 +35,12 @@ public class Usuario {
     private Integer tentativas;
 
 
+    public UsuarioDTO tUsuarioDTO(){
+        return new UsuarioDTO(
+                        this.nome,
+                        this.email      
+                    );   
+    }
 
 
 }
